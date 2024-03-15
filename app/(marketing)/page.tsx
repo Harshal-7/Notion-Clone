@@ -1,13 +1,21 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import Footer from "./_components/Footer";
+import FooterPage from "./_components/Footer";
+import { Heading } from "./_components/Heading";
+import { Heros } from "./_components/Heros";
 
-export default function Home() {
+const MarketingPage = () => {
   return (
-    <div className="flex flex-col justify-center items-center gap-24">
-      <h1 className="text-red-500 text-center fontbol text-4xl mt-10">
-        Notion-Clone
-      </h1>
-      <Button size={"lg"}>Button Example</Button>
+    <div className="min-h-full flex flex-col">
+      <div
+        className="flex flex-col items-center justify-center md:justify-start
+        text-center gap-y-8 flex-1 px-6 pb-10"
+      >
+        <Heading />
+        <Heros />
+      </div>
+      <Footer />
     </div>
   );
-}
+};
+
+export default MarketingPage;
